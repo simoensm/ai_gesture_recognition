@@ -4,6 +4,11 @@ Comparative study of 3D hand gesture recognition methods — **DTW**, **Edit-Dis
 
 This repository doubles as an **Obsidian knowledge vault** tightly integrated with **Zotero** for academic reference management.
 
+> **Note:** The actual project code (implementations, experiments, datasets, results) lives in the main project repository:
+> 👉 [Matteo-glz/MLSMM2154_Artificial-Intelligence_gesture_recognition](https://github.com/Matteo-glz/MLSMM2154_Artificial-Intelligence_gesture_recognition)
+>
+> This repo is the **research workspace** for that project — literature notes, concept maps, paper annotations, and course material organised in Obsidian.
+
 ---
 
 ## Table of Contents
