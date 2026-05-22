@@ -1,0 +1,51 @@
+# ── Claude (AI assistant workspace) ────────────────────────────────────────────
+Claude/
+
+# ── macOS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# ── Obsidian ────────────────────────────────────────────────────────────────────
+# Keep plugin source and config, but ignore auto-generated / local-only files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json    # contains local paths — may differ per machine
+
+# Un-ignore the Zotero Integration settings so the template config is shared:
+!.obsidian/plugins/obsidian-zotero-desktop-connector/data.json
+
+# ── Zotero ──────────────────────────────────────────────────────────────────────
+Zotero_Import/*.bib              # generated BibTeX exports; re-export locally
+
+# ── Python / Jupyter ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# ── Jupyter Notebooks ───────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Editor / IDE ────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Misc ────────────────────────────────────────────────────────────────────────
+*.log
+*.tmp

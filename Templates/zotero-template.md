@@ -1,11 +1,12 @@
-
-title: {{title}}
-authors: {{authors}}
+---
+title: "{{title}}"
+authors: "{{authors}}"
 year: {{date | format("YYYY")}}
-journal: {{publicationTitle}}
+journal: "{{publicationTitle}}"
 citekey: {{citekey}}
 tags: [literature, {{collections | join(", ")}}]
 status: unread
+---
 
 
 ## Metadata

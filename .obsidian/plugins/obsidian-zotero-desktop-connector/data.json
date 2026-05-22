@@ -1,0 +1,15 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "Papers",
+  "importFormats": [
+    {
+      "name": "Literature Note",
+      "outputPathTemplate": "Papers/{{citekey}}.md",
+      "imageOutputPathTemplate": "Papers/images/{{citekey}}/{{fileName}}",
+      "templatePath": "Templates/zotero-import-paper.md",
+      "bibliography": ""
+    }
+  ],
+  "openNoteAfterImport": true,
+  "pdfUtility": "pdfjs"
+}
