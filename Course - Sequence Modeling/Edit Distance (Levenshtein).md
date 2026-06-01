@@ -28,7 +28,22 @@ The process reads **x** character by character to reconstruct **y**.
   - $j$ = number of characters written to **y**
 - **Level** $k$ = all states where $i + j = k = \text{const}$
 
-This maps the problem onto a [[Directed Acyclic Graph (DAG)]] and [[Dynamic Programming]] can be applied.
+### Convention on $i$
+
+State $i$ means we have **read (extracted) the first $i$ characters of x**. In other words, $x$ has been cut from its first $i$ characters — they have been consumed in order to construct $y$. The remaining suffix $x_{i+1}\dots x_{|\mathbf{x}|}$ is yet to be processed.
+
+### Convention on $j$
+
+State $j$ means **the first $j$ characters of y have been transcribed**. We progressively read characters from $x$ and write characters to $y$, so $j$ tracks how far along the reconstruction of $y$ we are.
+
+> [!summary] Intuition
+> A state $(i, j)$ captures a snapshot of the transformation: "$i$ characters of $x$ have been consumed, and $j$ characters of $y$ have been produced." Each editing operation advances $i$, $j$, or both, moving us forward in the DAG until we reach the final state $(|\mathbf{x}|, |\mathbf{y}|)$.
+
+This maps the problem onto a [[Directed Acyclic Graph (DAG)]] structured into **levels and states**:
+- Each **level** $k = i + j$ is a step in the process
+- Each **state** is uniquely characterised by the pair $(i, j)$
+
+We can therefore directly apply [[Dynamic Programming]] to find the optimal sequence of operations efficiently.
 
 ---
 
@@ -52,8 +67,11 @@ $$D^*(\mathbf{x}_0^{|\mathbf{x}|}, \mathbf{y}_0^0) = 0$$
 **Recurrence:**
 $$D^*(\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^j) = \min \begin{cases} D^*(\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^{j-1}) + 1 & \text{(insertion)} \\ D^*(\mathbf{x}_{i-1}^{|\mathbf{x}|}, \mathbf{y}_0^j) + 1 & \text{(deletion)} \\ D^*(\mathbf{x}_{i-1}^{|\mathbf{x}|}, \mathbf{y}_0^{j-1}) + \delta_{ij} & \text{(substitution)} \end{cases}$$
 
-Each level $(i+j) = \text{const}$ corresponds to a **diagonal of the 2D table**.
-
+Each level $(i+j) = \text{const}$ corresponds to a **diagonal of the 2D table** :
+- One **level** corresponds to a diagonal $i + j = \text{const}$
+- One **state** corresponds to a cell $(i, j)$
+- One **operation** (insertion, deletion, substitution) corresponds to a valid transition between adjacent cells in the table
+![[Screenshot 2026-06-01 at 12.41.35.png]]
 ---
 
 ## Example: "lire" vs "livre"

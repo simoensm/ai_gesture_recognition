@@ -31,6 +31,7 @@ In **speech recognition**, the same word can be pronounced at different speeds. 
 
 These constraints ensure the alignment is **meaningful and complete**.
 
+
 ---
 
 ## Dynamic Programming Recurrence

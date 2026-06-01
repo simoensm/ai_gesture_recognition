@@ -24,9 +24,38 @@ $$p_{ij}^{(\tau)} = P(s_{t+\tau} = j \mid s_t = i) = [\mathbf{P}^\tau]_{ij}$$
 
 **Proof** (for 2 steps):
 
-$$P(s_{t+2} = j \mid s_t = i) = \sum_{k=1}^n p_{kj} p_{ik} = [\mathbf{P}^2]_{ij}$$
+$$\begin{align}
+P(s_{t+2} = j \mid s_t = i)
+&= \sum_{k=1}^{n} P(s_{t+2} = j,\ s_{t+1} = k \mid s_t = i) \\[6pt]
+&= \sum_{k=1}^{n} P(s_{t+2} = j \mid s_t = i,\ s_{t+1} = k)\ P(s_{t+1} = k \mid s_t = i) \\[6pt]
+&= \sum_{k=1}^{n} P(s_{t+2} = j \mid s_{t+1} = k)\ P(s_{t+1} = k \mid s_t = i) \\[6pt]
+&= \sum_{k=1}^{n} p_{kj}\ p_{ik} \\[6pt]
+&= [\mathbf{P}^2]_{ij}
+\end{align}$$
 
-By induction: $[\mathbf{P}^\tau]_{ij}$ gives $\tau$-step probabilities.
+- Line 1: marginalise over intermediate state $s_{t+1} = k$
+- Line 2: chain rule of probability
+- Line 3: [[Markov Property]] — future depends only on the present
+- Line 4: substitute $p_{ij} = P(s_{t+1}=j \mid s_t=i)$
+- Line 5: definition of matrix multiplication
+
+### Basis Vector Formulation
+
+Using the time evolution equation $\mathbf{x}(t) = (\mathbf{P}^T)^t\, \mathbf{x}(0)$, the probability of being in state $j$ at time $t$ can be written as:
+
+$$x_j(t) = \mathbf{x}(t)^T \mathbf{e}_j = \mathbf{x}(0)^T \mathbf{P}^t\, \mathbf{e}_j$$
+
+where $\mathbf{e}_j$ is the $j$-th **canonical basis vector** (zero everywhere except a $+1$ at position $j$).
+
+**Conditional on a fixed starting state:** when the process starts in state $i$ at $t = 0$, we have $\mathbf{x}(0) = \mathbf{e}_i$, and thus:
+
+$$x_{j \mid i}(t) = P(s_t = j \mid s_0 = i) = \mathbf{e}_i^T\, \mathbf{P}^t\, \mathbf{e}_j = \mathbf{e}_j^T\, (\mathbf{P}^T)^t\, \mathbf{e}_i$$
+
+This defines $x_{j\mid i}(t)$: the probability of observing the process in state $j$ at time $t$, given that it started in state $i$ at $t = 0$. Note that this is simply the $(i,j)$ entry of $\mathbf{P}^t$, consistent with the multi-step formula $p_{ij}^{(t)} = [\mathbf{P}^t]_{ij}$.
+
+**Interpretation:**
+- $\mathbf{P}^2$ is the **two-steps-ahead transition probability matrix**: entry $[\mathbf{P}^2]_{ij}$ gives the probability of going from state $i$ to state $j$ in exactly 2 steps.
+- By induction, $\mathbf{P}^t$ is the **$t$-steps-ahead transition probability matrix**: entry $[\mathbf{P}^t]_{ij} = P(s_{t+\tau} = j \mid s_t = i)$ gives the probability of reaching state $j$ from state $i$ in exactly $t$ steps.
 
 ---
 

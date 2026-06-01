@@ -1,4 +1,4 @@
-# HMM - Forward Procedure
+
 
 Tags: #HMM #forward #dynamic-programming #alpha
 

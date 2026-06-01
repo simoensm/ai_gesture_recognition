@@ -39,11 +39,12 @@ x₁   x₂   x₃  ...    xT
 
 ## The Three Core Problems
 
-| Problem | Algorithm | Goal |
-|---|---|---|
-| 1. **Likelihood** | [[HMM - Forward Procedure]] | $P(\mathbf{x} \mid \theta)$ |
-| 2. **Decoding** | [[HMM - Decoding (Viterbi Algorithm)]] | $\arg\max_\mathbf{s} P(\mathbf{s} \mid \mathbf{x}, \theta)$ |
-| 3. **Learning** | [[HMM - Parameter Estimation (Baum-Welch)]] | $\arg\max_\theta P(\mathbf{x} \mid \theta)$ |
+| Problem           | Algorithm                                   | Goal                                                        |
+| ----------------- | ------------------------------------------- | ----------------------------------------------------------- |
+| 1. **Likelihood** | [[HMM - Forward Procedure]]                 | $P(\mathbf{x} \mid \theta)$                                 |
+| 2. **Decoding**   | [[HMM - Decoding (Viterbi Algorithm)]]      | $\arg\max_\mathbf{s} P(\mathbf{s} \mid \mathbf{x}, \theta)$ |
+| 3. **Learning**   | [[HMM - Parameter Estimation (Baum-Welch)]] | $\arg\max_\theta P(\mathbf{x} \mid \theta)$                 |
+|                   |                                             |                                                             |
 
 ---
 
@@ -53,6 +54,8 @@ Each word is modelled as a sequence of **phonemes** (sounds):
 $$P \to A \to R \to I \to S$$
 
 Each phoneme = a hidden state, emitting acoustic feature vectors.
+
+![[Screenshot 2026-06-01 at 15.01.15.png]]
 
 ---
 

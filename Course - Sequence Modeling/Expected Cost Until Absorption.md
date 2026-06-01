@@ -37,10 +37,28 @@ $$V(i) = \sum_{(j,k) \in E} n_{ij} \, p_{jk} \, c_{jk}$$
 
 ## Derivation (Conditional Expectation)
 
-$$V(s_0 = i) = \mathbb{E}_{s_1, s_2, \dots}\left[\sum_{t=0}^{\infty} c_{s_t s_{t+1}} \,\bigg|\, s_0 = i\right]$$
+The derivation uses the **law of total expectation** (tower property):
 
-By expanding the first step and using the Markov property:
-$$= \sum_{k \in \text{Succ}(i)} p_{ik}(c_{ik} + V(k))$$
+$$\mathbb{E}_{x,y}[f(x,y)] = \mathbb{E}_x\!\left[\mathbb{E}_y[f(x,y) \mid x]\right]$$
+
+Let $V(i)$ be the **expected total cost until absorption** when starting from transient state $i$. Applied here: condition on the first transition $s_1$, then take the outer expectation — step by step:
+
+$$\begin{align}
+V(s_0 = i)
+&= \mathbb{E}_{s_1, s_2, \dots}\!\left[\sum_{t=0}^{\infty} c_{s_t s_{t+1}} \;\Bigg|\; s_0 = i\right] \\[8pt]
+&= \mathbb{E}_{s_1, s_2, \dots}\!\left[c_{s_0 s_1} + \sum_{t=1}^{\infty} c_{s_t s_{t+1}} \;\Bigg|\; s_0 = i\right] \\[8pt]
+&= \mathbb{E}_{s_1}\!\left[\mathbb{E}_{s_2, s_3, \dots}\!\left[c_{s_0 s_1} + \sum_{t=1}^{\infty} c_{s_t s_{t+1}} \;\Bigg|\; s_1\right] \;\Bigg|\; s_0 = i\right] \\[8pt]
+&= \mathbb{E}_{s_1}\!\left[c_{s_0 s_1} + \underbrace{\mathbb{E}_{s_2, s_3, \dots}\!\left[\sum_{t=1}^{\infty} c_{s_t s_{t+1}} \;\Bigg|\; s_1\right]}_{V(s_1)} \;\Bigg|\; s_0 = i\right] \\[8pt]
+&= \mathbb{E}_{s_1}\!\left[c_{s_0 s_1} + V(s_1) \mid s_0 = i\right] \\[8pt]
+&= \sum_{k \in \mathcal{S}\text{ucc}(i)} p_{ik}\bigl(c_{ik} + V(k)\bigr)
+\end{align}$$
+
+- Line 1: definition of $V(i)$
+- Line 2: peel off the first transition cost $c_{s_0 s_1}$
+- Line 3: apply the law of total expectation — condition on $s_1$ first
+- Line 4: $c_{s_0 s_1}$ is fixed given $s_1$; the remaining sum is $V(s_1)$ by the **Markov property**
+- Line 5: substitute the underbrace
+- Line 6: expand the expectation over $s_1$ using transition probabilities $p_{ik}$, where $\mathcal{S}\text{ucc}(i)$ is the **set of successor states of $i$** in the network structure (i.e. all states $k$ such that $p_{ik} > 0$)
 
 ---
 

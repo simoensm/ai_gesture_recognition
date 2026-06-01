@@ -27,7 +27,8 @@ $$\mathbf{P} = \begin{array}{cc} & \begin{array}{cc} \text{TR} & \text{ABS} \end
 ## Power of P
 
 $$\mathbf{P}^t = \begin{pmatrix} \mathbf{Q}^t & \cdots \\ \mathbf{0} & \mathbf{I} \end{pmatrix}$$
-
+Since **Q** is sub-stochastic, it can be shown that :
+$$\mathbf{Q}^t \rightarrow{0} \;as\; \mathbf{t} \rightarrow{\infty}  $$
 ---
 
 ## Key Derived Quantities
