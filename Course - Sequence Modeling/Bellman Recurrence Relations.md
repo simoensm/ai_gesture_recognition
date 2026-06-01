@@ -45,11 +45,31 @@ where $\{s\} \mid s_k = i \to s$ is the **set of successor states** of $i$.
 
 ---
 
-## Key Insight (Proof Sketch)
+## Proof of the Backward Recurrence
 
-The recurrence works because the minimum can be factored:
+**Goal:** show that $D^*(s_k) = \min_{s_{k+1}}\{d(s_{k+1}\mid s_k) + D^*(s_{k+1})\}$.
 
-$$D^*(s_k) = \min_{s_{k+1}} \left\{ d(s_{k+1} \mid s_k) + \underbrace{\min_{s_{k+2},\dots,s_N} \sum_{i=k+2}^{N} d(s_i \mid s_{i-1})}_{D^*(s_{k+1})} \right\}$$
+**Step 1 — Definition.** By definition, $D^*(s_k)$ is the minimum total cost of the path from $s_k$ to the end:
+
+$$D^*(s_k) = \min_{(s_{k+1},\dots,s_N)} \sum_{i=k+1}^{N} d(s_i \mid s_{i-1})$$
+
+**Step 2 — Peel off the first transition.** The first term of the sum is $d(s_{k+1}\mid s_k)$, which depends only on $s_{k+1}$, so factor it out:
+
+$$D^*(s_k) = \min_{(s_{k+1},\dots,s_N)} \left\{ d(s_{k+1} \mid s_k) + \sum_{i=k+2}^{N} d(s_i \mid s_{i-1}) \right\}$$
+
+**Step 3 — Split the minimisation.** Because $d(s_{k+1}\mid s_k)$ does not depend on $(s_{k+2},\dots,s_N)$, we can split the joint minimisation into two nested ones:
+
+$$D^*(s_k) = \min_{s_{k+1}} \left\{ d(s_{k+1} \mid s_k) + \min_{(s_{k+2},\dots,s_N)} \sum_{i=k+2}^{N} d(s_i \mid s_{i-1}) \right\}$$
+
+**Step 4 — Recognise the sub-problem.** The inner minimisation is exactly the definition of $D^*(s_{k+1})$:
+
+$$\min_{(s_{k+2},\dots,s_N)} \sum_{i=k+2}^{N} d(s_i \mid s_{i-1}) = D^*(s_{k+1})$$
+
+**Conclusion.** Substituting gives the Bellman recurrence:
+
+$$\boxed{D^*(s_k) = \min_{s_{k+1}} \left\{ d(s_{k+1} \mid s_k) + D^*(s_{k+1}) \right\}}$$
+
+This is valid for all $k = N-1, N-2, \dots, 0$, with boundary condition $D^*(s_N) = 0$ (no cost once the end is reached). The key principle is the **principle of optimality**: the tail of an optimal path is itself optimal, which is what allows the split in Step 3.
 
 ---
 

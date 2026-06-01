@@ -38,12 +38,12 @@ See → [[Editing Operations]]
 
 | Operation | Transition | Cost |
 |---|---|---|
-| Insertion | $(\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^{j-1}) \to (\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^j)$ | $\delta_\text{ins}(y_i) = 1$ |
-| Deletion | $(\mathbf{x}_{i-1}^{|\mathbf{x}|}, \mathbf{y}_0^j) \to (\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^j)$ | $\delta_\text{del}(x_i) = 1$ |
-| Substitution | $(\mathbf{x}_{i-1}^{|\mathbf{x}|}, \mathbf{y}_0^{j-1}) \to (\mathbf{x}_i^{|\mathbf{x}|}, \mathbf{y}_0^j)$ | $\delta_{ij} = 0$ if $x_i = y_j$, else $1$ |
+| Insertion | $(i,\ j-1) \to (i,\ j)$ | $\delta_\text{ins}(y_j) = 1$ |
+| Deletion | $(i-1,\ j) \to (i,\ j)$ | $\delta_\text{del}(x_i) = 1$ |
+| Substitution | $(i-1,\ j-1) \to (i,\ j)$ | $\delta_{ij} = 0$ if $x_i = y_j$, else $1$ |
 
 ---
-
+	
 ## Dynamic Programming Formula
 
 **Initialization:**
@@ -58,9 +58,19 @@ Each level $(i+j) = \text{const}$ corresponds to a **diagonal of the 2D table**.
 
 ## Example: "lire" vs "livre"
 
+$\mathbf{x}$ = `lire` (length 4), $\mathbf{y}$ = `livre` (length 5). Each cell $(i,j)$ holds $D^*(i,j)$ = minimum edits to transform $x_1\dots x_i$ into $y_1\dots y_j$.
+
+|  | $\varnothing$ | **l** | **i** | **v** | **r** | **e** |
+|---|---|---|---|---|---|---|
+| $\varnothing$ | 0 | 1 | 2 | 3 | 4 | 5 |
+| **l** | 1 | 0 | 1 | 2 | 3 | 4 |
+| **i** | 2 | 1 | 0 | 1 | 2 | 3 |
+| **r** | 3 | 2 | 1 | 1 | 1 | 2 |
+| **e** | 4 | 3 | 2 | 2 | 2 | **1** |
+
 $$\text{dist}(\text{lire}, \text{livre}) = 1$$
 
-(one deletion of 'v')
+The optimal path backtracks from $(4,5)$: match **e**, match **r**, **delete v**, match **i**, match **l** — one deletion of `v`.
 
 ---
 
@@ -68,17 +78,40 @@ $$\text{dist}(\text{lire}, \text{livre}) = 1$$
 
 See → [[Longest Common Subsequence]]
 
-$$\text{lcs}(\mathbf{x}, \mathbf{y}) = \frac{1}{2}(|\mathbf{x}| + |\mathbf{y}| - \text{dist}(\mathbf{x}, \mathbf{y}))$$
+Starting from the general identity:
 
-Valid when the substitution penalty = 2 × insertion/deletion cost.
+$$\text{dist}(\mathbf{x}, \mathbf{y}) = \text{lcs}(\mathbf{x}, \mathbf{x}) + \text{lcs}(\mathbf{y}, \mathbf{y}) - 2\,\text{lcs}(\mathbf{x}, \mathbf{y})$$
+
+Since $\text{lcs}(\mathbf{x}, \mathbf{x}) = |\mathbf{x}|$ and $\text{lcs}(\mathbf{y}, \mathbf{y}) = |\mathbf{y}|$, this simplifies to:
+
+$$\text{dist}(\mathbf{x}, \mathbf{y}) = |\mathbf{x}| + |\mathbf{y}| - 2\,\text{lcs}(\mathbf{x}, \mathbf{y})$$
+
+Which can be rearranged to express LCS in terms of edit distance:
+
+$$\text{lcs}(\mathbf{x}, \mathbf{y}) = \frac{1}{2}\bigl(|\mathbf{x}| + |\mathbf{y}| - \text{dist}(\mathbf{x}, \mathbf{y})\bigr)$$
+
+> [!warning] Condition
+> These equalities hold only when the **substitution penalty = 2 × insertion/deletion cost**. Under this condition, a substitution is never preferred over an insertion + deletion pair, so the edit distance only uses insertions and deletions — which is exactly what LCS counts.
+
+**Application to the example:** since $\text{dist}(\text{lire}, \text{livre}) = 1$, we have:
+
+$$\text{lcs}(\text{lire}, \text{livre}) = \frac{1}{2}(4 + 5 - 1) = 4$$
 
 ---
 
 ## Finding the Optimal Path
 
 To recover the **optimal sequence of operations**:
-1. Maintain a pointer to the predecessor state in each cell
-2. **Backtrack** from the final state $(|\mathbf{x}|, |\mathbf{y}|)$
+1. For each cell $(i, j)$ of the DP table, maintain a **pointer to the previous state** (the cell it was reached from).
+2. Once the table is filled, **backtrack from the final state** $(|\mathbf{x}|, |\mathbf{y}|)$ by following pointers back to $(0, 0)$.
+3. The sequence of pointers traced gives the optimal edit sequence (which operations to apply and in which order).
+
+> [!info] Extensions
+> Numerous extensions and generalisations of this basic algorithm have been developed, including:
+> - **Weighted edit distance** — different costs for each operation or character pair
+> - **Damerau–Levenshtein** — adds transposition as a fourth operation
+> - **Restricted edit distance** — constraints on the allowed path (e.g. Sakoe–Chiba band, used in DTW)
+> - **Approximate string matching** — find the best match of a pattern within a longer text
 
 ---
 

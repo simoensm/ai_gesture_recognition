@@ -525,18 +525,18 @@ if __name__ == "__main__":
 
 ## 7. Parameters & Ablation Guide
 
-| Parameter        | Candidates                          | Default   | Effect                                                             |
-| ---------------- | ----------------------------------- | --------- | ------------------------------------------------------------------ |
-| `hidden_size`    | 64, **128**, 256                    | 128       | Capacity of each directional LSTM; 2H is output size               |
-| `num_layers`     | 1, **2**, 3                         | 2         | Depth of the BiLSTM stack; more layers ≠ always better             |
-| `dropout`        | 0.0, 0.2, **0.3**, 0.5              | 0.3       | Regularization between layers; critical with small datasets        |
-| `lr`             | 1e-2, **1e-3**, 5e-4, 1e-4          | 1e-3      | Learning rate; use ReduceLROnPlateau to adapt                      |
-| `optimizer_name` | `adam`, **`adamw`**, `sgd`          | `adamw`   | AdamW adds decoupled weight decay — generally preferred            |
-| `pooling`        | `last`, **`mean`**, `attention`     | `mean`    | Aggregation strategy over timesteps                                |
-| `batch_size`     | 8, **16**, 32, 64                   | 16        | Larger batches → less noisy gradients; constrained by dataset size |
-| `input_features` | raw, **+velocity**, +velocity+accel | +velocity | Feature engineering; velocity is usually free gains                |
-| `use_input_proj` | **False**, True                     | False     | Linear bottleneck before LSTM; helps if input_dim is very high     |
-| `weight_decay`   | 0, **1e-4**, 1e-3                   | 1e-4      | L2 regularization for AdamW; prevents overfitting                  |
+| Parameter        | Candidates                          | Default   | Effect                                                             |     |
+| ---------------- | ----------------------------------- | --------- | ------------------------------------------------------------------ | --- |
+| `hidden_size`    | 64, **128**, 256                    | 128       | Capacity of each directional LSTM; 2H is output size               |     |
+| `num_layers`     | 1, **2**, 3                         | 2         | Depth of the BiLSTM stack; more layers ≠ always better             |     |
+| `dropout`        | 0.0, 0.2, **0.3**, 0.5              | 0.3       | Regularization between layers; critical with small datasets        |     |
+| `lr`             | 1e-2, **1e-3**, 5e-4, 1e-4          | 1e-3      | Learning rate; use ReduceLROnPlateau to adapt                      |     |
+| `optimizer_name` | `adam`, **`adamw`**, `sgd`          | `adamw`   | AdamW adds decoupled weight decay — generally preferred            |     |
+| `pooling`        | `last`, **`mean`**, `attention`     | `mean`    | Aggregation strategy over timesteps                                |     |
+| `batch_size`     | 8, **16**, 32, 64                   | 16        | Larger batches → less noisy gradients; constrained by dataset size |     |
+| `input_features` | raw, **+velocity**, +velocity+accel | +velocity | Feature engineering; velocity is usually free gains                |     |
+| `use_input_proj` | **False**, True                     | False     | Linear bottleneck before LSTM; helps if input_dim is very high     |     |
+| `weight_decay`   | 0, **1e-4**, 1e-3                   | 1e-4      | L2 regularization for AdamW; prevents overfitting                  |     |
 
 ### Parameter Explanations
 
