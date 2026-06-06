@@ -148,6 +148,40 @@ updated: 2026-05-22
 
 ---
 
+## 🎬 Recommender Systems (MLSMM2156)
+
+### Foundational CF
+
+| Paper | Year | What it contributes |
+|---|---|---|
+| [[Resnick1994_GroupLens]] — *GroupLens* | 1994 | Coins "collaborative filtering"; first deployed CF system |
+| [[Sarwar2001_ItemCF]] — *Item-based CF* | 2001 | Item-item similarity, adjusted cosine, scalable CF |
+| [[Koren2009_MatrixFactorization]] — *MF for RecSys* | 2009 | SVD, bias terms, implicit feedback — Netflix Prize winner |
+| [[Koren2008_FactorizationNeighborhood]] — *SVD++* | 2008 | Factorization + neighbourhood + implicit feedback |
+| [[Lee1999_NMF]] — *NMF* | 1999 | Non-negative MF, parts-based representations |
+
+### Dataset & Features
+
+| Paper | Year | What it contributes |
+|---|---|---|
+| [[Harper2016_MovieLens]] — *MovieLens Datasets* | 2016 | Standard benchmark; 1M dataset used in project |
+| [[Vig2012_TagGenome]] — *Tag Genome* | 2012 | 1,128 continuous tag scores — best content feature in project |
+
+### Content-Based & Hybrid
+
+| Paper | Year | What it contributes |
+|---|---|---|
+| [[Burke2002_HybridRS]] — *Hybrid RS Survey* | 2002 | 7 hybridisation strategies; cascade pattern used in webapp |
+| [[Schein2002_ColdStart]] — *Cold-Start Recommendations* | 2002 | Methods for new users/items; justifies Phase 0/1 cascade |
+
+### Evaluation
+
+| Paper | Year | What it contributes |
+|---|---|---|
+| [[Herlocker2004_EvaluatingCF]] — *Evaluating CF Systems* | 2004 | RMSE vs MAE, coverage, novelty, offline vs user study |
+
+---
+
 ## 🔗 Concept Notes
 
 | Concept | Used by |
@@ -163,6 +197,11 @@ updated: 2026-05-22
 | [[Concepts/kNN_Classifier\|k-NN Classifier]] | All three baselines |
 | [[Concepts/Cross_Validation\|Cross-Validation Protocol]] | All methods |
 | [[Concepts/Kabsch_Algorithm\|Kabsch Algorithm]] | $3 Recognizer |
+| [[Concepts/Recommender_Systems\|Recommender Systems]] | MLSMM2156 project — overview & taxonomy |
+| [[Concepts/Collaborative_Filtering\|Collaborative Filtering]] | UserBased, ItemBased CF models |
+| [[Concepts/Matrix_Factorization\|Matrix Factorization]] | SVD, SVD++, NMF models |
+| [[Concepts/Content_Based_Filtering\|Content-Based Filtering]] | ContentBased, ContentBasedWithStats |
+| [[Concepts/TF-IDF\|TF-IDF]] | Text feature extraction; genome tags |
 
 ---
 

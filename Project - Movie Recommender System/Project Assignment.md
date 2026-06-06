@@ -1,6 +1,6 @@
 ---
 title: "MLSMM2156 — Movie Recommender System: Project Assignment"
-course: "MLSMM2156 — Recommender Systems"
+course: MLSMM2156 — Recommender Systems
 tags:
   - project
   - recommender-systems
@@ -13,9 +13,7 @@ tags:
 created: 2026-05-25
 deadline: TBD (see Moodle)
 authors:
-  - GALIZIA Matteo
-  - MINET Bastian
-  - SIMOENS Mathias
+  - Corentin Vande Kerckhove
 ---
 
 # MLSMM2156 — Movie Recommender System

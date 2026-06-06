@@ -20,6 +20,11 @@ End-to-end pipeline, data, splitting, evaluation, tuning, and decision-making.
 | [[Workflow/07_Statistical_Assessment]] | Friedman test, Nemenyi, Wilcoxon |
 | [[Workflow/08_Results_and_Decision_Making]] | RMSE tables, best models per family |
 | [[Workflow/09_Beyond_Accuracy]] | ILD, Novelty, Coverage, Hit Rate |
+| [[Workflow/10_Content_Based_Theory]] | Content-based filtering — full theory (TF-IDF, profiling, filtering) |
+| [[Workflow/11_Latent_Factor_Theory]] | Latent factor models — full theory (MF, SVD, Netflix Prize) |
+| [[Workflow/12_Rating_Bias_and_Statistics]] | Mean-centering, Bayesian shrinkage, similarity metrics |
+| [[Workflow/14_Review_and_Gaps]] | Project review: gaps, open questions, random seed, TODOs |
+| [[Workflow/15_Evaluator_vs_Ablation]] | Why LOO is expensive; evaluator vs ablation differences |
 
 ---
 
@@ -47,6 +52,7 @@ Flask server and recommendation serving pipeline.
 |---|---|
 | [[Webapp/01_Webapp_Overview]] | Architecture, startup, model selection |
 | [[Webapp/02_Server_Endpoints]] | `/recommend`, `/similar`, cold/warm start cascade |
+| [[Webapp/03_Cascade_Architecture]] | Phase 0/1/2 cascade, ContentBasedWithStats, Ridge justification |
 
 ---
 
