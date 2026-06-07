@@ -1,0 +1,5 @@
+- [ ] Webapp = Mathias (5 min)
+- [ ] Résultats :
+	- [ ] 4 modèles + métriques
+- [ ] Introduction (30 sec) = Matteo
+- [ ] 
