@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - overview
+  - MLSMM2156
+  - movielens
+---
 # Project Overview
 
 **Goal:** Build the most accurate MovieLens-based recommender system possible, measured by RMSE on held-out ratings, while avoiding overfitting and preserving diversity.

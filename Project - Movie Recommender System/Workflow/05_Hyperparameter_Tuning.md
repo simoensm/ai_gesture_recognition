@@ -1,3 +1,10 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - hyperparameter-tuning
+  - MLSMM2156
+---
 # Hyperparameter Tuning Strategy
 
 How hyperparameters were chosen and why specific ranges were explored.

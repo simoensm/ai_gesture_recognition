@@ -1,3 +1,10 @@
+---
+tags:
+  - dynamic-programming
+  - bellman
+  - recurrence
+  - sequence-modeling
+---
 
 Tags: #dynamic-programming #bellman #recurrence
 

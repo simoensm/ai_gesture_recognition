@@ -1,3 +1,10 @@
+---
+tags:
+  - LCS
+  - dynamic-programming
+  - string-similarity
+  - sequence-modeling
+---
 # Longest Common Subsequence
 
 Tags: #edit-distance #string-similarity #LCS

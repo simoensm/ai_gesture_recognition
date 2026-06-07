@@ -1,3 +1,9 @@
+---
+tags:
+  - MOC
+  - sequence-modeling
+  - index
+---
 # 🗺️ MOC — Modelling Sequential Data
 **Course:** Machine Learning — Marco Saerens (UCLouvain)
 

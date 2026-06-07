@@ -1,3 +1,9 @@
+---
+tags:
+  - dynamic-programming
+  - optimisation
+  - sequence-modeling
+---
 
 Tags: #dynamic-programming #optimization #shortest-path
 

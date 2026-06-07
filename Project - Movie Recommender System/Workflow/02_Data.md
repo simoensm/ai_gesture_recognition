@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - data
+  - movielens
+  - MLSMM2156
+---
 # Data Description
 
 The project uses the **hackathon split** of the MovieLens-1M dataset.

@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - collaborative-filtering
+  - MLSMM2156
+---
 # Collaborative Filtering Models
 
 **File:** `recsys/models.py` — `UserBased` (line 790) and `ItemBased` (line 892)

@@ -1,3 +1,11 @@
+---
+tags:
+  - HMM
+  - likelihood
+  - forward
+  - backward
+  - sequence-modeling
+---
 # HMM - Likelihood Computation
 
 Tags: #HMM #likelihood #forward #backward

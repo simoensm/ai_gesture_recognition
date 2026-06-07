@@ -1,3 +1,10 @@
+---
+tags:
+  - HMM
+  - markov-chain
+  - stochastic
+  - sequence-modeling
+---
 # Hidden Markov Model (HMM)
 
 Tags: #HMM #generative-model #sequential-data #probabilistic

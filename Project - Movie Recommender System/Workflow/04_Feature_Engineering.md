@@ -1,3 +1,12 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - feature-engineering
+  - genome
+  - TF-IDF
+  - MLSMM2156
+---
 # Feature Engineering
 
 All item feature representations used in content-based models. Each produces a feature matrix where **rows = movies** and **columns = features**.

@@ -1,3 +1,12 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - content-based
+  - ridge
+  - MLSMM2156
+---
 # Content-Based Models
 
 **File:** `recsys/models.py` — `ContentBased` (line 1056), `ContentBasedWithStats` (line 1214), `ContentBasedPlus` (line 1367)

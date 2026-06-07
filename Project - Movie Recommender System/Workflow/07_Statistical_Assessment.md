@@ -1,3 +1,13 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - statistical-testing
+  - Friedman
+  - Nemenyi
+  - Wilcoxon
+  - MLSMM2156
+---
 # Statistical Assessment
 
 Can we trust that RMSE differences between models reflect genuine quality, not fold-sampling luck?

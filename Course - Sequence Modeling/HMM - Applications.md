@@ -1,3 +1,9 @@
+---
+tags:
+  - HMM
+  - speech-recognition
+  - sequence-modeling
+---
 # HMM - Applications
 
 Tags: #HMM #applications #NLP #speech #bioinformatics

@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - results
+  - RMSE
+  - MLSMM2156
+---
 # Results & Decision Making
 
 Complete RMSE results per model family and the reasoning behind each design choice.

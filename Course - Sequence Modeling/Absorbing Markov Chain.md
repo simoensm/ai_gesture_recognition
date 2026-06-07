@@ -1,3 +1,10 @@
+---
+tags:
+  - markov-chain
+  - absorbing
+  - transient
+  - sequence-modeling
+---
 # Absorbing Markov Chain
 
 Tags: #markov-chain #absorbing #transient

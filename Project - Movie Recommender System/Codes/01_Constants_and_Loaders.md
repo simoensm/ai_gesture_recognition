@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - data-loading
+  - MLSMM2156
+---
 # Constants & Loaders
 
 **Files:** `recsys/constants.py` and `recsys/loaders.py`

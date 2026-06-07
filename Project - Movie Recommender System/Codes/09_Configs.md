@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - configuration
+  - MLSMM2156
+---
 # Configs — WebappConfig & EvalConfig
 
 **File:** `recsys/configs.py`

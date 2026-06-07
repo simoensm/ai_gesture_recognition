@@ -1,3 +1,11 @@
+---
+tags:
+  - HMM
+  - forward
+  - dynamic-programming
+  - alpha
+  - sequence-modeling
+---
 
 
 Tags: #HMM #forward #dynamic-programming #alpha

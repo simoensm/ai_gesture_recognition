@@ -1,3 +1,11 @@
+---
+tags:
+  - markov-chain
+  - absorbing
+  - cost
+  - bellman
+  - sequence-modeling
+---
 # Expected Cost Until Absorption
 
 Tags: #markov-chain #absorbing #cost #bellman

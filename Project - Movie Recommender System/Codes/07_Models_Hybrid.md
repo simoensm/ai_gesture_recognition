@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - hybrid
+  - MLSMM2156
+---
 # Hybrid Model
 
 **File:** `recsys/models.py` — `HybridSVD` (line 1297)

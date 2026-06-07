@@ -1,3 +1,11 @@
+---
+tags:
+  - markov-chain
+  - application
+  - recommender-systems
+  - PageRank
+  - sequence-modeling
+---
 # Application - ItemRank (Collaborative Filtering)
 
 Tags: #markov-chain #recommendation #PageRank #random-walk

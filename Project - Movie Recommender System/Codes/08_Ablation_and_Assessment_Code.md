@@ -1,3 +1,12 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - ablation
+  - statistical-testing
+  - MLSMM2156
+---
 # Ablation Study & Statistical Assessment Code
 
 **Files:** `recsys/ablation_study.py` and `recsys/statistical_assessment.py`

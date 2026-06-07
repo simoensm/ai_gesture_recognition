@@ -1,3 +1,10 @@
+---
+tags:
+  - markov-chain
+  - absorbing
+  - probability
+  - sequence-modeling
+---
 # Absorption Probabilities
 
 Tags: #markov-chain #absorbing #probability

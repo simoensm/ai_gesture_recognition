@@ -1,3 +1,11 @@
+---
+tags:
+  - edit-distance
+  - string-similarity
+  - dynamic-programming
+  - NLP
+  - sequence-modeling
+---
 Tags: #edit-distance #string-similarity #dynamic-programming #NLP
 
 ---

@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - webapp
+  - flask
+  - architecture
+  - MLSMM2156
+---
 # Webapp Overview
 
 **File:** `recsys/server.py`, `webapp/` (React frontend)

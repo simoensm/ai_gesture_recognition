@@ -1,3 +1,11 @@
+---
+tags:
+  - HMM
+  - backward
+  - dynamic-programming
+  - beta
+  - sequence-modeling
+---
 # HMM - Backward Procedure
 
 Tags: #HMM #backward #dynamic-programming #beta

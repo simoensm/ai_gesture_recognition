@@ -1,3 +1,13 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - diversity
+  - novelty
+  - coverage
+  - ILD
+  - MLSMM2156
+---
 # Beyond-Accuracy Metrics
 
 RMSE measures prediction quality, but not recommendation usefulness. A model that recommends the same 10 blockbusters to every user has great RMSE on popular movies but is useless in practice.

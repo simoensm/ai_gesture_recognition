@@ -1,3 +1,11 @@
+---
+tags:
+  - markov-chain
+  - convergence
+  - ergodic
+  - stationary
+  - sequence-modeling
+---
 # Irreducible and Regular Markov Chains
 
 Tags: #markov-chain #convergence #ergodic

@@ -1,3 +1,11 @@
+---
+tags:
+  - DTW
+  - signal-alignment
+  - speech-recognition
+  - dynamic-programming
+  - sequence-modeling
+---
 # Dynamic Time Warping
 
 Tags: #DTW #signal-alignment #speech-recognition #dynamic-programming

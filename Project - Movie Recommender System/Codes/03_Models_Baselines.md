@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - baselines
+  - MLSMM2156
+---
 # Baseline Models
 
 **File:** `recsys/models.py` — lines 748–783

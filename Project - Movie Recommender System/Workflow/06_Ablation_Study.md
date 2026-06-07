@@ -1,3 +1,10 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - ablation
+  - MLSMM2156
+---
 # Ablation Study Workflow
 
 The ablation study is the engine that runs all model configurations systematically and produces all results.

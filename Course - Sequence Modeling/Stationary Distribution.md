@@ -1,3 +1,11 @@
+---
+tags:
+  - markov-chain
+  - stationary
+  - eigenvector
+  - long-run
+  - sequence-modeling
+---
 # Stationary Distribution
 
 Tags: #markov-chain #stationary #eigenvector #long-run

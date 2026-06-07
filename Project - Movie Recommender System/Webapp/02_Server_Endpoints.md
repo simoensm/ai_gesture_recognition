@@ -1,3 +1,12 @@
+---
+tags:
+  - recommender-systems
+  - webapp
+  - flask
+  - API
+  - endpoints
+  - MLSMM2156
+---
 # Server Endpoints
 
 **File:** `recsys/server.py` — `recommend()` and `similar()` functions

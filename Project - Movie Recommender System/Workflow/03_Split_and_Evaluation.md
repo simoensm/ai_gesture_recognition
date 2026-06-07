@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - workflow
+  - evaluation
+  - cross-validation
+  - MLSMM2156
+---
 # Train/Test Split & Evaluation Protocol
 
 How we measure model performance rigorously, without data leakage.

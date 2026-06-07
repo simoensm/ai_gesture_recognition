@@ -1,3 +1,9 @@
+---
+tags:
+  - HMM
+  - formalism
+  - sequence-modeling
+---
 # HMM Formalism
 
 Tags: #HMM #notation #parameters

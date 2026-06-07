@@ -1,3 +1,10 @@
+---
+tags:
+  - markov-chain
+  - absorbing
+  - fundamental-matrix
+  - sequence-modeling
+---
 # Fundamental Matrix
 
 Tags: #markov-chain #absorbing #fundamental-matrix

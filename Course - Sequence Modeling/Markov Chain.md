@@ -1,3 +1,10 @@
+---
+tags:
+  - markov-chain
+  - stochastic-process
+  - sequential-data
+  - sequence-modeling
+---
 # Markov Chain
 
 Tags: #markov-chain #stochastic-process #sequential-data

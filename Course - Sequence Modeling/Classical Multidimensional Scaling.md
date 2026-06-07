@@ -1,3 +1,9 @@
+---
+tags:
+  - dimensionality-reduction
+  - MDS
+  - sequence-modeling
+---
 permet de réaliser une PCQ (réduire la dimensionalite du dataset) à partir d'une matrice de distances au carré => basé sur des distances calculées entre des observations (DTW)
 
 Si D = matrice : il est possible d'en déduire des features. 

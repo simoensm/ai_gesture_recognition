@@ -1,3 +1,11 @@
+---
+tags:
+  - HMM
+  - viterbi
+  - dynamic-programming
+  - decoding
+  - sequence-modeling
+---
 # HMM - Decoding (Viterbi Algorithm)
 
 Tags: #HMM #viterbi #dynamic-programming #decoding

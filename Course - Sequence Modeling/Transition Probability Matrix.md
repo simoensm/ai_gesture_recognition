@@ -1,3 +1,10 @@
+---
+tags:
+  - markov-chain
+  - matrix
+  - stochastic
+  - sequence-modeling
+---
 Tags: #markov-chain #matrix #stochastic
 
 ---

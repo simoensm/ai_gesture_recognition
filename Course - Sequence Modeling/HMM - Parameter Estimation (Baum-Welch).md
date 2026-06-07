@@ -1,3 +1,11 @@
+---
+tags:
+  - HMM
+  - EM
+  - Baum-Welch
+  - parameter-estimation
+  - sequence-modeling
+---
 
 Tags: #HMM #EM #Baum-Welch #parameter-estimation #learning
 

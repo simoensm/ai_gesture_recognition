@@ -1,3 +1,9 @@
+---
+tags:
+  - markov-chain
+  - conditional-independence
+  - sequence-modeling
+---
 Tags: #markov-chain #independence #memoryless
 
 ---

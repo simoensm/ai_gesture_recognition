@@ -1,3 +1,10 @@
+---
+tags:
+  - DAG
+  - graph
+  - dynamic-programming
+  - sequence-modeling
+---
 
 Tags: #graph-theory #dynamic-programming #structure
 

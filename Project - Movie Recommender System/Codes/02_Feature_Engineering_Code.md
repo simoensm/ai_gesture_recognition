@@ -1,3 +1,11 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - feature-engineering
+  - MLSMM2156
+---
 # Feature Engineering Code
 
 **File:** `recsys/models.py` — the `build_content_features()` factory function and its helpers.

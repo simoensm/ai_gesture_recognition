@@ -1,4 +1,12 @@
-# 🎬 RecSys MLSMM2156 — Knowledge Base
+---
+tags:
+  - recommender-systems
+  - MOC
+  - MLSMM2156
+  - movielens
+  - index
+---
+# RecSys MLSMM2156 — Knowledge Base
 
 Welcome to the knowledge base for the **MovieLens Recommender System** project (MLSMM2156 Hackathon).
 

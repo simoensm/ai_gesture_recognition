@@ -1,3 +1,11 @@
+---
+tags:
+  - markov-chain
+  - application
+  - marketing
+  - CLV
+  - sequence-modeling
+---
 # Application - Customer Lifetime Value
 
 Tags: #markov-chain #application #marketing #CLV

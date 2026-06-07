@@ -1,3 +1,12 @@
+---
+tags:
+  - recommender-systems
+  - code
+  - python
+  - matrix-factorization
+  - SVD
+  - MLSMM2156
+---
 # Latent Factor Models
 
 **File:** `recsys/models.py` — `SVDModel` (line 982), `SVDppModel` (line 1006), `NMFModel` (line 1027)
