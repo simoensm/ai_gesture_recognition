@@ -14,7 +14,7 @@ tags:
 > **Key papers:** [[Papers/Sakoe1978|Sakoe & Chiba (1978)]], [[Papers/Berndt1994|Berndt & Clifford (1994)]], [[Papers/Keogh2001_DDTW|Keogh & Pazzani (2001)]], [[Papers/Salvador2007|Salvador & Chan (2007)]], [[Papers/Rabiner1993_SpeechRecognition|Rabiner & Juang (1993)]], [[Papers/Itakura1975|Itakura (1975)]]  
 > **Concepts:** [[Concepts/Dynamic_Programming|Dynamic Programming]], [[Concepts/kNN_Classifier|k-NN Classifier]], [[Concepts/Cross_Validation|Cross-Validation Protocol]], [[Concepts/Supervised_Learning_Framework|Supervised Learning Framework]]  
 > **Workflows:** [[Workflows/Data_Preprocessing|Data Preprocessing]], [[Workflows/Model_Evaluation|Model Evaluation]], [[Workflows/Hyperparameter_Tuning|Hyperparameter Tuning]]  
-> **Related methods:** [[02_Edit_Distance|Edit Distance]], [[03_Three_Cent_Recognizer|$3 Recognizer]], [[04_BiLSTM|BiLSTM]]
+> **Related methods:** [[05_Edit_Distance_kNN|Edit Distance]], [[06_Three_Cent_Recognizer|$3 Recognizer]], [[07_BiLSTM|BiLSTM]]
 
 ---
 
@@ -381,7 +381,7 @@ Per-sequence z-score normalization removes between-subject differences in gestur
 ## 7. Limitations
 
 - **Quadratic complexity:** $\mathcal{O}(n^2)$ per comparison; slow with long sequences or large template libraries. Mitigated by the Sakoe-Chiba band or FastDTW → [[Papers/Salvador2007|Salvador & Chan (2007)]].
-- **No learning:** DTW does not update its representation based on training data — all training samples are used as templates. Contrast with [[04_BiLSTM|BiLSTM]] which learns a parameterised model.
+- **No learning:** DTW does not update its representation based on training data — all training samples are used as templates. Contrast with [[07_BiLSTM|BiLSTM]] which learns a parameterised model.
 - **High variance:** As a non-parametric method, 1-NN DTW has zero bias but potentially high variance — see [[Concepts/Bias_Variance_Regularisation|Bias-Variance Trade-off]].
 - **Sensitive to outliers:** A single noisy frame can significantly affect the warping path → [[Workflows/Data_Preprocessing|Data Preprocessing]] (outlier removal, normalisation).
 - **Template selection:** 1-NN DTW stores the entire training set. With more samples per class, accuracy generally improves but prediction slows.

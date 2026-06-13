@@ -40,26 +40,32 @@ This repository doubles as an **Obsidian knowledge vault** tightly integrated wi
 
 ```
 ai-gesture-recognition/
-├── 00_AI_Knowledge_Graph_MOC.md     # Master map of content
-├── Concepts/                        # ML/AI concept notes (CNNs, Transformers, etc.)
-├── Foundations/                     # Math foundations (probability, optimisation, …)
-├── Papers/                          # Literature notes (one per paper, keyed by citekey)
-│   └── images/                      # PDF annotation images exported by Zotero
-├── Project - Gesture Recognition/   # Project-specific notes and workflow
-├── Course - Sequence Modeling/      # Lecture notes
-├── Workflows/                       # Reusable ML pipeline notes
-├── Templates/                       # Obsidian note templates
-│   ├── zotero-import-paper.md       # Primary Zotero import template
-│   ├── zotero-template.md           # Lightweight Zotero template
-│   ├── literature-note.md           # Manual literature note
-│   ├── topic-note.md                # Concept / topic note
-│   └── thinking-note.md             # Fleeting / thinking note
-├── Zotero_Import/                   # BibTeX exports from Zotero (gitignored)
-├── Daily Notes/                     # Daily log notes
-└── .obsidian/                       # Obsidian config (plugins, settings)
+├── 00_AI_Knowledge_Graph_MOC.md          # Master map of content (both projects)
+├── Concepts/                             # ML/AI concept notes (CNNs, Transformers, etc.)
+├── Foundations/                          # Math foundations (probability, optimisation, …)
+├── Papers/                               # Literature notes (one per paper, keyed by citekey)
+│   ├── 00_Papers_MOC.md                  # Full index of paper notes by topic
+│   └── images/                           # PDF annotation images exported by Zotero
+├── Project - Gesture Recognition/        # Gesture recognition project (MLSMM2154)
+├── Project - Movie Recommender System/   # RecSys project (MLSMM2156 Hackathon)
+│   ├── 00_HOME.md                        # Main index + best results at a glance
+│   ├── Workflow/                         # Pipeline notes (data, split, eval, models, webapp…)
+│   ├── Codes/                            # Code explanation notes (all Python files)
+│   └── Webapp/                           # Flask server and cascade recommendation pipeline
+├── Course - Sequence Modeling/           # Lecture notes + 10 exam Q&A with full derivations
+├── Workflows/                            # Reusable ML pipeline notes
+├── Templates/                            # Obsidian note templates
+│   ├── zotero-import-paper.md            # Primary Zotero import template (Nunjucks)
+│   ├── zotero-template.md                # Lightweight Zotero template
+│   ├── literature-note.md                # Manual literature note
+│   ├── topic-note.md                     # Concept / topic note
+│   └── thinking-note.md                  # Fleeting / thinking note
+├── Zotero_Import/                        # BibTeX exports from Zotero (gitignored)
+├── Daily Notes/                          # Daily log notes
+└── .obsidian/                            # Obsidian config (plugins, settings)
 ```
 
-**Note:** The `Claude/` folder (AI assistant memory) is gitignored and will not be pushed to GitHub.
+**Note:** The `Claude/` folder (AI assistant memory) and `Course - Sequence Modeling/` are gitignored and will not be pushed to GitHub.
 
 ---
 

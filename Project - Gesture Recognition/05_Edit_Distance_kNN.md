@@ -14,7 +14,7 @@ tags:
 > **Key papers:** [[Papers/Levenshtein1966|Levenshtein (1966)]], [[Papers/Wagner1974|Wagner & Fischer (1974)]], [[Papers/Nyirarugira2014|Nyirarugira (2014)]], [[Papers/GarciaDiez2011_SumOverPaths|Garcia-Diez et al. (2011)]], [[Papers/Theodoridis2009|Theodoridis & Koutroumbas (2009)]], [[Papers/Gavrila1999|Gavrila (1999)]]  
 > **Concepts:** [[Concepts/Dynamic_Programming|Dynamic Programming]], [[Concepts/Vector_Quantization|Vector Quantization]], [[Concepts/Clustering_EM|Clustering & k-Means]], [[Concepts/kNN_Classifier|k-NN Classifier]], [[Concepts/Cross_Validation|Cross-Validation Protocol]], [[Concepts/Supervised_Learning_Framework|Supervised Learning Framework]], [[Concepts/Longest_Common_Subsequence|LCS (related)]]  
 > **Workflows:** [[Workflows/Data_Preprocessing|Data Preprocessing]], [[Workflows/Model_Evaluation|Model Evaluation]]  
-> **Related methods:** [[01_DTW_Dynamic_Time_Warping|DTW]], [[03_Three_Cent_Recognizer|$3 Recognizer]], [[04_BiLSTM|BiLSTM]]
+> **Related methods:** [[04_DTW_kNN|DTW]], [[06_Three_Cent_Recognizer|$3 Recognizer]], [[07_BiLSTM|BiLSTM]]
 
 ---
 

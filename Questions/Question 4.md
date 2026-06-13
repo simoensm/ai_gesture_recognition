@@ -109,3 +109,4 @@ This is simply $[\mathbf{P}^t]_{ij}$, consistent with the multi-step formula.
 For a **regular** Markov chain, $\mathbf{x}(t)$ converges to the unique **stationary distribution** $\boldsymbol{\pi}$ regardless of the initial state:
 
 $$\lim_{t\to\infty} \mathbf{x}(t) = \boldsymbol{\pi}, \quad \text{where } \boldsymbol{\pi} = \mathbf{P}^T\boldsymbol{\pi},\ \sum_i \pi_i = 1$$
+

@@ -24,7 +24,7 @@ where $\mathbf{Q}$ = transient-to-transient transitions, $\mathbf{R}$ = transien
 
 ---
 
-### Expected Number of Visits: The Fundamental Matrix
+### Expected Number Fundamental Matrix
 
 $n_{ij}$ = expected number of times the process visits transient state $j$, starting from transient state $i$, before absorption.
 

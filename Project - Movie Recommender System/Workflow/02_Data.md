@@ -28,15 +28,15 @@ Constants for all paths are defined in [[Codes/01_Constants_and_Loaders]].
 
 ## Dataset Statistics
 
-| Property | Value |
-|---|---|
-| Users | ~1,000 |
-| Movies (total) | ~8,744 |
-| Ratings | ~180,000 |
-| Rating scale | {0.5, 1.0, 1.5, …, 5.0} |
-| Sparsity | > 97% |
-| Global mean rating | ~3.5 |
-| Avg ratings per user | ~180 |
+| Property             | Value                   |
+| -------------------- | ----------------------- |
+| Users                | ~1,000                  |
+| Movies (total)       | ~8,744                  |
+| Ratings              | ~360,000                |
+| Rating scale         | {0.5, 1.0, 1.5, …, 5.0} |
+| Sparsity             | > 97%                   |
+| Global mean rating   | ~3.5                    |
+| Avg ratings per user | ~180                    |
 
 The **rating matrix** is a 1,000 × 8,744 table where most cells are empty. This extreme sparsity is why collaborative filtering struggles: most user pairs share very few co-rated movies.
 

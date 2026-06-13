@@ -16,7 +16,7 @@ tags:
 > **Concepts:** [[Concepts/Kabsch_Algorithm|Kabsch Algorithm]], [[Concepts/kNN_Classifier|k-NN Classifier]], [[Concepts/Cross_Validation|Cross-Validation Protocol]], [[Concepts/Dimensionality_Reduction|Dimensionality Reduction (PCA alignment)]], [[Concepts/Supervised_Learning_Framework|Supervised Learning Framework]]  
 > **Foundations:** [[Foundations/Linear_Algebra_for_ML|Linear Algebra (SVD, rotation)]]  
 > **Workflows:** [[Workflows/Data_Preprocessing|Data Preprocessing]], [[Workflows/Model_Evaluation|Model Evaluation]]  
-> **Related methods:** [[01_DTW_Dynamic_Time_Warping|DTW]], [[02_Edit_Distance|Edit Distance]], [[04_BiLSTM|BiLSTM]]
+> **Related methods:** [[04_DTW_kNN|DTW]], [[05_Edit_Distance_kNN|Edit Distance]], [[07_BiLSTM|BiLSTM]]
 
 ---
 

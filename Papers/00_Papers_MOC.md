@@ -174,11 +174,14 @@ updated: 2026-05-22
 | [[Burke2002_HybridRS]] — *Hybrid RS Survey* | 2002 | 7 hybridisation strategies; cascade pattern used in webapp |
 | [[Schein2002_ColdStart]] — *Cold-Start Recommendations* | 2002 | Methods for new users/items; justifies Phase 0/1 cascade |
 
-### Evaluation
+### Évaluation des RecSys
 
 | Paper | Year | What it contributes |
 |---|---|---|
 | [[Herlocker2004_EvaluatingCF]] — *Evaluating CF Systems* | 2004 | RMSE vs MAE, coverage, novelty, offline vs user study |
+| [[Chen2017_PerformanceEvaluation]] — *Performance Evaluation of RS* | 2017 | Cadre complet : 3 méthodes (offline/user study/A-B) × 4 perspectives métriques (ML, IR, HCI, Eng.) |
+| [[Castells2015_NoveltyDiversity]] — *Novelty and Diversity in RS* | 2015 | ILD, MIUF, Unexpectedness, Aggregate Diversity — au-delà de la précision ; MMR greedy algorithm |
+| [[Meng2020_DataSplitting]] — *Exploring Data Splitting Strategies* | 2020 | Leave One Last vs Temporal Global — la stratégie de découpage est une variable confondante critique |
 
 ---
 

@@ -1,5 +1,10 @@
 ---
-tags: [recommender-systems, latent-factors, matrix-factorization, SVD, collaborative-filtering]
+tags:
+  - recommender-systems
+  - latent-factors
+  - matrix-factorization
+  - SVD
+  - collaborative-filtering
 ---
 # Latent Factor Models — Theory
 
@@ -132,7 +137,7 @@ Content-based genres
 - arbitrary
 Latent factors
 
-||Content-based genres|Latent factors|
+| | Content-based genres|Latent factors|
 |Source|Manually assigned|Data-driven|
 |Subjectivity|High (depends on labeller)|Low|
 |Scope|Arbitrary (top-5 genres?)|Determined by the data structure|

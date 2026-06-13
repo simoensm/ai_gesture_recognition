@@ -19,7 +19,7 @@ tags:
 > **Optimiser:** [[Papers/Kingma2014_Adam|Adam (Kingma & Ba, 2014)]]  
 > **Workflows:** [[Workflows/Data_Preprocessing|Data Preprocessing]] · [[Workflows/Model_Evaluation|Model Evaluation]] · [[Workflows/Hyperparameter_Tuning|Hyperparameter Tuning]]  
 > **HMM alternative:** [[Papers/Fink2014_MarkovModels|Fink (2014)]] · [[Papers/Rabiner1993_SpeechRecognition|Rabiner & Juang (1993)]]  
-> **Related methods:** [[01_DTW_Dynamic_Time_Warping|DTW]], [[02_Edit_Distance|Edit Distance]], [[03_Three_Cent_Recognizer|$3 Recognizer]]
+> **Related methods:** [[04_DTW_kNN|DTW]], [[05_Edit_Distance_kNN|Edit Distance]], [[06_Three_Cent_Recognizer|$3 Recognizer]]
 
 ---
 

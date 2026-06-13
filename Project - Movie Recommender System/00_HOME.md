@@ -17,22 +17,22 @@ Welcome to the knowledge base for the **MovieLens Recommender System** project (
 ### [[Workflow/01_Project_Overview|🔁 Workflow]]
 End-to-end pipeline, data, splitting, evaluation, tuning, and decision-making.
 
-| Note | Topic |
-|---|---|
-| [[Workflow/01_Project_Overview]] | Dataset at a glance, goals, model families |
-| [[Workflow/02_Data]] | MovieLens dataset, features, rating distribution |
-| [[Workflow/03_Split_and_Evaluation]] | K-Fold CV, LOO, train/test protocol |
-| [[Workflow/04_Feature_Engineering]] | All content feature methods explained |
-| [[Workflow/05_Hyperparameter_Tuning]] | Strategy, grids, results per family |
-| [[Workflow/06_Ablation_Study]] | How the ablation pipeline works |
-| [[Workflow/07_Statistical_Assessment]] | Friedman test, Nemenyi, Wilcoxon |
-| [[Workflow/08_Results_and_Decision_Making]] | RMSE tables, best models per family |
-| [[Workflow/09_Beyond_Accuracy]] | ILD, Novelty, Coverage, Hit Rate |
-| [[Workflow/10_Content_Based_Theory]] | Content-based filtering — full theory (TF-IDF, profiling, filtering) |
-| [[Workflow/11_Latent_Factor_Theory]] | Latent factor models — full theory (MF, SVD, Netflix Prize) |
-| [[Workflow/12_Rating_Bias_and_Statistics]] | Mean-centering, Bayesian shrinkage, similarity metrics |
-| [[Workflow/14_Review_and_Gaps]] | Project review: gaps, open questions, random seed, TODOs |
-| [[Workflow/15_Evaluator_vs_Ablation]] | Why LOO is expensive; evaluator vs ablation differences |
+| Note                                        | Topic                                                                |
+| ------------------------------------------- | -------------------------------------------------------------------- |
+| [[Workflow/01_Project_Overview]]            | Dataset at a glance, goals, model families                           |
+| [[Workflow/02_Data]]                        | MovieLens dataset, features, rating distribution                     |
+| [[Workflow/03_Split_and_Evaluation]]        | K-Fold CV, LOO, train/test protocol                                  |
+| [[Workflow/04_Feature_Engineering]]         | All content feature methods explained                                |
+| [[Workflow/05_Hyperparameter_Tuning]]       | Strategy, grids, results per family                                  |
+| [[Workflow/06_Ablation_Study]]              | How the ablation pipeline works                                      |
+| [[Workflow/07_Statistical_Assessment]]      | Friedman test, Nemenyi, Wilcoxon                                     |
+| [[Workflow/08_Results_and_Decision_Making]] | RMSE tables, best models per family                                  |
+| [[Workflow/09_Beyond_Accuracy]]             | ILD, Novelty, Coverage, Hit Rate                                     |
+| [[Workflow/10_Content_Based_Theory]]        | Content-based filtering — full theory (TF-IDF, profiling, filtering) |
+| [[Workflow/11_Latent_Factor_Theory]]        | Latent factor models — full theory (MF, SVD, Netflix Prize)          |
+| [[Workflow/12_Rating_Bias_and_Statistics]]  | Mean-centering, Bayesian shrinkage, similarity metrics               |
+| [[Workflow/14_Review_and_Gaps]]             | Project review: gaps, open questions, random seed, TODOs             |
+| [[Workflow/15_Evaluator_vs_Ablation]]       | Why LOO is expensive; evaluator vs ablation differences              |
 
 ---
 
@@ -74,3 +74,22 @@ Flask server and recommendation serving pipeline.
 | Latent Factor (SVD++) | f=150, λ=0.05, η=0.01 | 0.7890 ± 0.0024 |
 | Content-Based | Genome full + stats, Ridge α=20 | 0.7346 ± 0.0015 |
 | **Hybrid** | **SVD (α=0.2) + Genome Ridge** | **0.7308 ± 0.0015** |
+
+### Beyond-Accuracy (Hybrid model)
+
+| ILD | Novelty | Coverage | Hit Rate (LOO top-40) |
+|---|---|---|---|
+| 0.663 | 4.98 | 8.0% | **0.064** |
+
+→ Détails complets : [[Workflow/09_Beyond_Accuracy]]
+
+---
+
+## 📚 Littérature Clé (Évaluation)
+
+| Paper | Contribution |
+|---|---|
+| [[Papers/Chen2017_PerformanceEvaluation]] | 3 méthodes d'évaluation (offline/user study/A-B) × 4 familles de métriques (ML, IR, HCI, Engineering) — avec toutes les formules |
+| [[Papers/Castells2015_NoveltyDiversity]] | Nouveauté, diversité, sérendipité — ILD, MIUF, Unexpectedness, Aggregate Diversity, algorithme MMR |
+| [[Papers/Meng2020_DataSplitting]] | Leave One Last vs Temporal Global — le splitting est une variable confondante (Kendall τ ∈ [0.53, 0.76]) |
+| [[Papers/Herlocker2004_EvaluatingCF]] | RMSE vs MAE, évaluation offline vs user study, coverage, novelty |

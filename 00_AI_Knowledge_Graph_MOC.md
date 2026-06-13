@@ -168,17 +168,51 @@ Practical step-by-step guides for applying ML.
 
 ---
 
-## 🤚 Your Project
+## 🤚 Projet 1 — Gesture Recognition
 
 | Note | Status |
 |---|---|
 | [[Project - Gesture Recognition/00_Gesture_Recognition_MOC\|Gesture Recognition MOC]] | Master index, checklist |
-| [[Project - Gesture Recognition/01_DTW_Dynamic_Time_Warping\|01 — DTW]] | Sakoe-Chiba, DDTW, FastDTW |
-| [[Project - Gesture Recognition/02_Edit_Distance\|02 — Edit Distance]] | Levenshtein, LCS, Nyirarugira adaptation |
-| [[Project - Gesture Recognition/03_Three_Cent_Recognizer\|03 — $3 Recognizer]] | Resampling pipeline, Protractor3D, Kabsch |
-| [[Project - Gesture Recognition/04_BiLSTM\|04 — BiLSTM]] | Architecture, training, comparison |
+| [[Project - Gesture Recognition/04_DTW_kNN\|04 — DTW]] | Sakoe-Chiba, DDTW, FastDTW |
+| [[Project - Gesture Recognition/05_Edit_Distance_kNN\|05 — Edit Distance]] | Levenshtein, LCS, Nyirarugira adaptation |
+| [[Project - Gesture Recognition/06_Three_Cent_Recognizer\|06 — $3 Recognizer]] | Resampling pipeline, Protractor3D, Kabsch |
+| [[Project - Gesture Recognition/07_BiLSTM\|07 — BiLSTM]] | Architecture, training, comparison |
 
 **Dataset:** Huang et al. (2019) — 10 users × 10 classes × 10 repetitions = 1,000 sequences, 3D coordinates. → [[Papers/Huang2019|Huang 2019]]
+
+---
+
+## 🎬 Projet 2 — Movie Recommender System (MLSMM2156)
+
+| Note | Contenu |
+|---|---|
+| [[Project - Movie Recommender System/00_HOME\|🏠 RecSys — HOME]] | Index principal, meilleurs résultats, liens vers tous les workflows |
+| [[Project - Movie Recommender System/Workflow/01_Project_Overview\|01 — Vue d'ensemble]] | Dataset MovieLens, objectifs, familles de modèles |
+| [[Project - Movie Recommender System/Workflow/03_Split_and_Evaluation\|03 — Split & Évaluation]] | K-Fold CV, LOO, protocole, anti-testset, impact du splitting |
+| [[Project - Movie Recommender System/Workflow/09_Beyond_Accuracy\|09 — Beyond Accuracy]] | ILD, Novelty, Coverage, Hit Rate — résultats par modèle |
+| [[Project - Movie Recommender System/Workflow/11_Latent_Factor_Theory\|11 — Latent Factor Theory]] | SVD, SVD++, NMF — théorie complète |
+| [[Project - Movie Recommender System/Workflow/10_Content_Based_Theory\|10 — Content-Based Theory]] | TF-IDF, Tag Genome, profiling, Ridge |
+
+**Meilleur modèle :** Hybrid (SVD α=0.2 + Genome Ridge) — CV RMSE = **0.7308**
+
+### 📄 Littérature RecSys (Évaluation)
+
+| Paper | Année | Contribution clé |
+|---|---|---|
+| [[Papers/Herlocker2004_EvaluatingCF\|Herlocker 2004]] | 2004 | RMSE vs MAE, évaluation offline vs user study |
+| [[Papers/Chen2017_PerformanceEvaluation\|Chen 2017]] | 2017 | Cadre complet : 3 méthodes × 4 familles de métriques (ML/IR/HCI/Engineering) |
+| [[Papers/Castells2015_NoveltyDiversity\|Castells 2015]] | 2015 | ILD, MIUF, Unexpectedness, Aggdiv, MMR — au-delà de la précision |
+| [[Papers/Meng2020_DataSplitting\|Meng 2020]] | 2020 | Leave One Last vs Temporal Global — la stratégie de split est une variable confondante |
+
+### 🔍 Quick Reference RecSys
+
+| Question | Aller à |
+|---|---|
+| Comment mesurer la qualité d'une recommandation ? | [[Papers/Chen2017_PerformanceEvaluation\|Chen 2017]] |
+| Qu'est-ce que la bulle de filtre et comment la mesurer ? | [[Papers/Castells2015_NoveltyDiversity\|Castells 2015]] → [[Project - Movie Recommender System/Workflow/09_Beyond_Accuracy\|Beyond Accuracy]] |
+| Pourquoi le découpage des données est-il critique ? | [[Papers/Meng2020_DataSplitting\|Meng 2020]] → [[Project - Movie Recommender System/Workflow/03_Split_and_Evaluation\|Split & Eval]] |
+| Comment fonctionne SVD/MF pour les RecSys ? | [[Project - Movie Recommender System/Workflow/11_Latent_Factor_Theory\|Latent Factor Theory]] |
+| Quelles sont nos métriques beyond-accuracy ? | [[Project - Movie Recommender System/Workflow/09_Beyond_Accuracy\|Beyond Accuracy]] |
 
 ---
 

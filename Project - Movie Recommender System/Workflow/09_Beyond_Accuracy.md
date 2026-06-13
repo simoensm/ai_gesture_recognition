@@ -131,4 +131,14 @@ TMDB full          0.888          0.44 ↓         6.2
 
 ---
 
+---
+
+## 📚 Références Académiques
+
+- **Métriques beyond-accuracy — cadre théorique complet :** [[Papers/Castells2015_NoveltyDiversity]] — ILD, MIUF, Unexpectedness, Aggregate Diversity, algorithme MMR, bulle de filtre, longue traîne
+- **Vue d'ensemble des métriques d'évaluation RecSys :** [[Papers/Chen2017_PerformanceEvaluation]] — taxonomy ML/IR/HCI/Engineering, formules MAE/RMSE/Precision/Recall/nDCG/Coverage
+- **Impact du découpage des données :** [[Papers/Meng2020_DataSplitting]] — Leave One Last vs Temporal Global, Kendall τ, variable confondante
+
+---
+
 **See also:** [[Workflow/08_Results_and_Decision_Making]] | [[Workflow/03_Split_and_Evaluation]] | [[Workflow/07_Statistical_Assessment]]

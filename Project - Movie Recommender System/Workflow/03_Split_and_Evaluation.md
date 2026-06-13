@@ -49,12 +49,12 @@ Reported: mean(RMSE₁…₅) ± std(RMSE₁…₅)
 
 We use **random** rating-level splitting (not temporal/chronological).
 
-**Why random?**
+**Why random ?**
 - Our goal is **rating prediction accuracy**, not "predict the user's next watch"
 - Random splitting better reflects general recommendation quality
 - Temporal splitting would be preferred if the task were sequential next-item prediction
 
-(Meng et al. 2020 showed that splitting strategy can change the relative ranking of models — this choice matters.)
+([[Papers/Meng2020_DataSplitting|Meng et al. 2020]] showed that splitting strategy can change the relative ranking of models — this choice matters. They demonstrate via Kendall's τ ∈ [0.53, 0.76] between pairs of strategies that the data splitting is a key confounding variable, and recommend Temporal Global Split as the most realistic setting.)
 
 ---
 

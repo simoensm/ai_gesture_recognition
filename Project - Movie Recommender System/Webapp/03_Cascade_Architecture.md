@@ -81,12 +81,12 @@ where $\mathbf{x}_i$ is the 1,128-dimensional genome tag vector. **Fundamental l
 
 **ContentBasedWithStats** appends 4 quality statistics to $\mathbf{x}_i$, computed exclusively from training ratings (no leakage):
 
-| Stat | Formula | What it captures |
-|---|---|---|
+| Stat                 | Formula                                                   | What it captures            |
+| -------------------- | --------------------------------------------------------- | --------------------------- |
 | `item_bayesian_mean` | $(n \cdot \mu_i + 25 \cdot \mu_\text{global}) / (n + 25)$ | Shrinkage-corrected quality |
-| `item_log_count` | $\log(1 + n)$ | Popularity proxy |
-| `item_std` | $\sigma(r_i)$ | Divisiveness / polarisation |
-| `item_high_ratio` | $P(r \geq 4)$ | "Loved it" rate |
+| `item_log_count`     | $\log(1 + n)$                                             | Popularity proxy            |
+| `item_std`           | $\sigma(r_i)$                                             | Divisiveness / polarisation |
+| `item_high_ratio`    | $P(r \geq 4)$                                             | "Loved it" rate             |
 
 All four are MinMaxScaled to [0,1] to match the genome feature range.
 
@@ -102,3 +102,25 @@ All four are MinMaxScaled to [0,1] to match the genome feature range.
 | Random/popularity | Ignores user preferences entirely |
 
 > *"Ridge is preferred over OLS (unstable under correlated high-dimensional features), Lasso (spurious sparsity on jointly informative genome tags), and RidgeCV (empirically equivalent but slower). The closed-form solution enables real-time per-request inference in the webapp."*
+
+
+$$\mathbf{w}_u \cdot \mathbf{x}_i \approx r_{u,i}$$ $$\chi^2_F = \frac{12N}{k(k+1)} \sum_{j=1}^{k} \left(\bar{r}_j - \frac{k+1}{2}\right)^2$$
+Ah, tu parles du **χ² de Pearson** — le test d'indépendance classique. Différent du Friedman.
+
+---
+
+**La formule**
+
+$$\chi^2 = \sum_{i=1}^{p} \frac{(O_i - E_i)^2}{E_i}$$
+
+- **O_i** = valeur **Observée** dans la catégorie i
+- **E_i** = valeur **Attendue** sous H₀ dans la catégorie i
+- On somme sur toutes les catégories p
+
+---
+
+**L'intuition**
+
+Pour chaque catégorie, on mesure l'écart entre ce qu'on observe et ce qu'on attendrait si H₀ était vraie. On normalise par E_i (les petites catégories ne doivent pas peser autant que les grandes).
+
+Si χ² est grand → les observations s'écartent trop de ce qu'on attendrait sous H₀ → on rejette H₀.
